@@ -99,17 +99,17 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/blog.md'
-        label: 'Blog Page'
-        name: 'blog-page'
+      - file: 'content/pages/travels.md'
+        label: 'Travels Page'
+        name: 'travels-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: BlogIndex,
+              default: TravelsPage,
             }
-          - { label: Slug, name: slug, widget: hidden, default: 'blog' }
+          - { label: Slug, name: slug, widget: hidden, default: 'travels' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
@@ -139,17 +139,17 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/componets.md'
-        label: 'Componets Page'
-        name: 'componets-page'
+      - file: 'content/pages/work.md'
+        label: 'Work Page'
+        name: 'work-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: ComponetsPage,
+              default: WorkPage,
             }
-          - { label: Slug, name: slug, widget: hidden, default: 'componets' }
+          - { label: Slug, name: slug, widget: hidden, default: 'work' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
@@ -339,15 +339,20 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: postCategories
-    label: Post Category
+  - name: travelCountries
+    label: Travel Countries
     editor:
       preview: false
-    folder: content/postCategories
+    folder: content/travelCountries
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: Template, name: template, widget: hidden, default: BlogIndex }
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: TravelsPage,
+        }
       - { label: Title, name: title, widget: string }
       - { label: Subtitle, name: subtitle, widget: string, required: false }
       - {

@@ -6,7 +6,7 @@ import Nav from '../components/Nav'
 import Image from '../components/Image'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
+export const HomePageTemplate = () => (
   <main className="Home">
     <div className="Container">
       <div className="Container--Left">
@@ -46,7 +46,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <HomePageTemplate {...page} {...page.frontmatter} />
   </Layout>
 )
 
@@ -60,12 +60,6 @@ export const pageQuery = graphql`
   query HomePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
-      html
-      frontmatter {
-        title
-        subtitle
-        featuredImage
-      }
     }
   }
 `

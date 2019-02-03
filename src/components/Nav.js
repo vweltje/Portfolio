@@ -31,9 +31,9 @@ export class Navigation extends Component {
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
-          className={`NavLink ${
-            to === this.state.currentPath ? 'active' : ''
-          } ${className}`}
+          className={`NavLink${to === this.state.currentPath ? ' active' : ''}${
+            className ? ' ' + className : ''
+          }`}
           onClick={this.handleLinkClick}
           {...props}
         >
@@ -48,10 +48,9 @@ export class Navigation extends Component {
             <Logo />
           </Link>
           <div className="Nav--Links">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/components/">Components</NavLink>
-            <NavLink to="/blog/">Blog</NavLink>
-            <NavLink to="/default/">Default</NavLink>
+            <NavLink to="/">About</NavLink>
+            <NavLink to="/work/">Work</NavLink>
+            <NavLink to="/travels/">Travels</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
           <button

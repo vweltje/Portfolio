@@ -49,7 +49,6 @@
   --col4: #242c37;
   --font-primary: 'Fira Code', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
-  --borderRadius: 3px;
 }
 
 ::-webkit-scrollbar {
@@ -57,15 +56,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 3px var(--grey);
+  -webkit-box-shadow: inset 0 0 3px var(--col4);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
+  background-color: var(--col1);
 }
 
 ::selection {
-  background: rgba(0, 194, 189, 0.6);
+  background: var(--col1);
 }
 
 html {
@@ -131,11 +130,10 @@ h2 {
 
 /* Container */
 .Container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 .Container--Left,
@@ -146,6 +144,15 @@ h2 {
 }
 
 .Container--Left {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.Container--Right {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .Content {
@@ -178,10 +185,9 @@ h2 {
   font-size: 1.4rem;
   display: inline-block;
   padding: 1.25rem 3rem;
-  border: none;
+  border: 2px solid var(--col1);
   transition: all 0.2s ease;
   cursor: pointer;
-  border-radius: var(--borderRadius);
 }
 .Button:hover,
 .Button:focus {
