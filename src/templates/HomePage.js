@@ -1,25 +1,45 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
-import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
 import Layout from '../components/Layout'
+import Nav from '../components/Nav'
+import Image from '../components/Image'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
   <main className="Home">
-    <PageHeader
-      large
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
-
-    <section className="section">
-      <div className="container">
-        <Content source={body} />
+    <div className="Container">
+      <div className="Container--Left">
+        <div className="Overlay" />
+        <Image
+          background
+          src="https://ucarecdn.com/1f7335b2-4899-4722-96cc-9139fcc48d88/"
+          resolutions="large"
+          alt="Home - Vincent is happy at a temple in Mexico"
+          className="Align--Bottom"
+        />
+        <span className="Caption">Hierve El Agua - Mexico</span>
       </div>
-    </section>
+      <div className="Container--Right">
+        <Nav />
+        <div className="Content">
+          <h1>Vincent Weltje</h1>
+          <h2>Full stack web developer</h2>
+          <p>
+            I am a passionate and hard working person, love to explore and have
+            always a big hunger for new knowladge and advantures. I love to
+            inspire other people around me and get inspired by them. Hit the
+            buttons below to see my work and travles!
+          </p>
+          <Link className="Button" to="work">
+            Work
+          </Link>
+          <Link className="Button" to="travels">
+            Travels
+          </Link>
+        </div>
+      </div>
+    </div>
   </main>
 )
 

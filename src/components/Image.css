@@ -29,3 +29,7 @@
 .LazyImage.faded {
   opacity: 1;
 }
+
+.Align--Bottom {
+  background-position: bottom;
+}
