@@ -18,7 +18,7 @@ export const WorkPageTemplate = () => (
           alt="Home - Vincent is happy at a temple in Mexico"
           className="Align--Bottom"
         />
-        <span className="Caption">Hierve El Agua - Mexico</span>
+        <span className="Caption">The Pass, Byron Bay, NSW - Australia</span>
       </div>
       <div className="Container--Right">
         <Nav />

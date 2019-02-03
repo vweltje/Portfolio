@@ -72,7 +72,7 @@ export const TravelsPageTemplate = ({
                 alt="Home - Vincent is happy at a temple in Mexico"
                 className="Align--Bottom"
               />
-              <span className="Caption">Hierve El Agua - Mexico</span>
+              <span className="Caption">Somewhere in Chiapas - Mexico</span>
             </div>
             <div className="Container--Right">
               <Nav />
