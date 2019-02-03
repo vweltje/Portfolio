@@ -1,0 +1,45 @@
+/* SplitView */
+
+.Container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.Container--Left,
+.Container--Right {
+  width: 50%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.Container--Left {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.Container--Right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.Content {
+  position: relative;
+  padding: 7.5rem;
+  min-height: calc(100vh - 6rem);
+  height: auto;
+}
+
+.Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--col4);
+  opacity: 0.2;
+  z-index: 1;
+}
