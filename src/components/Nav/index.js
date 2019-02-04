@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Location } from '@reach/router'
 import { Menu, X } from 'react-feather'
 
 import './Nav.css'
 
-export class Navigation extends Component {
+export default class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false
@@ -82,4 +81,4 @@ export class Navigation extends Component {
   }
 }
 
-export default () => <Location>{route => <Navigation {...route} />}</Location>
+// export default () => <Location>{route => <Navigation {...route} />}</Location>
