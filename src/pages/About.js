@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import SplitView, { Left, Right } from '../components/SplitView'
-import Image from '../components/Image'
+import Button from '../components/Button'
 
 export default class About extends Component {
   render() {
+    const image = {
+        src: 'https://ucarecdn.com/1f7335b2-4899-4722-96cc-9139fcc48d88/',
+        alt: 'Home - Vincent is happy at a temple in Mexico',
+        style: { backgroundPosition: 'bottom' }
+      },
+      caption = 'Springbrook National Park, QLD - Australia'
+
     return (
       <SplitView>
-        <Left>
-          <Image
-            background
-            src="https://ucarecdn.com/1f7335b2-4899-4722-96cc-9139fcc48d88/"
-            resolutions="large"
-            alt="Home - Vincent is happy at a temple in Mexico"
-            className="Align--Bottom"
-          />
-          <span className="Caption">
-            Springbrook National Park, QLD - Australia
-          </span>
-        </Left>
+        <Left image={image} caption={caption} />
         <Right>
           <h1>Vincent Weltje</h1>
           <h2>Full stack web developer</h2>
@@ -28,12 +23,12 @@ export default class About extends Component {
             inspire other people around me and get inspired by them. Hit the
             buttons below to see my work and travles!
           </p>
-          <Link className="Button" to="work">
+          <Button className="Button" to="work">
             Work
-          </Link>
-          <Link className="Button" to="travels">
+          </Button>
+          <Button className="Button" to="travels">
             Travels
-          </Link>
+          </Button>
         </Right>
       </SplitView>
     )

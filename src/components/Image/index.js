@@ -55,6 +55,7 @@ class Image extends React.Component {
       backgroundSize = 'cover',
       resolutions = '1000x',
       className = '',
+      style = {},
       src,
       secSet = '',
       fullSrc,
@@ -84,14 +85,15 @@ class Image extends React.Component {
     smallSrc = `${src}${
       isUploadcare ? '-/progressive/yes/-/format/auto/-/resize/10x/' : ''
     }`
+    console.log(smallSrc)
 
-    let style = {}
     if (background) {
       style = {
         backgroundImage: `url(${
           this.state.isIntersecting ? fullSrc : smallSrc
         })`,
-        backgroundSize
+        backgroundSize,
+        ...style
       }
     }
 
@@ -103,6 +105,7 @@ class Image extends React.Component {
               className={`BackgroundImage ${className}`}
               ref={this.ref}
               style={{
+                ...style,
                 backgroundImage: `url(${smallSrc})`,
                 backgroundSize: 'cover'
               }}
@@ -146,6 +149,7 @@ class Image extends React.Component {
                 sizes={'100vw'}
                 onClick={onClick}
                 alt={alt}
+                style={style}
               />
             )}
           </Fragment>
