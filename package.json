@@ -1,9 +1,8 @@
 {
-  "name": "my-app",
+  "name": "portfolio-site-vincent-weltje",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reach/router": "^1.2.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-feather": "^1.1.6",
