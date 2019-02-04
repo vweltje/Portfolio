@@ -85,7 +85,6 @@ class Image extends React.Component {
     smallSrc = `${src}${
       isUploadcare ? '-/progressive/yes/-/format/auto/-/resize/10x/' : ''
     }`
-    console.log(smallSrc)
 
     if (background) {
       style = {

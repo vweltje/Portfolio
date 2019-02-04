@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Location } from '@reach/router'
 import { Menu, X } from 'react-feather'
 
@@ -8,12 +8,8 @@ import './Nav.css'
 export class Navigation extends Component {
   state = {
     active: false,
-    activeSubNav: false,
-    currentPath: false
+    activeSubNav: false
   }
-
-  componentDidMount = () =>
-    this.setState({ currentPath: this.props.location.pathname })
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 
@@ -26,36 +22,53 @@ export class Navigation extends Component {
     })
 
   render() {
-    const { active } = this.state,
-      NavLink = ({ to, className, children, ...props }) => (
-        <Link
-          to={to}
-          className={`NavLink${to === this.state.currentPath ? ' active' : ''}${
-            className ? ' ' + className : ''
-          }`}
-          onClick={this.handleLinkClick}
-          {...props}
-        >
-          {children}
-        </Link>
-      )
+    const { active } = this.state
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          <Link to="/" onClick={this.handleLinkClick}>
+          <NavLink to="/" onClick={this.handleLinkClick}>
             <div
               className="Logo"
               style={{
-                backgroundImage: `url(/images/logo.svg)`
+                backgroundImage: `url(images/logo.svg)`
               }}
             />
-          </Link>
+          </NavLink>
           <div className="Nav--Links">
-            <NavLink to="/">About</NavLink>
-            <NavLink to="/work/">Work</NavLink>
-            <NavLink to="/travels/">Travels</NavLink>
-            <NavLink to="/contact/">Contact</NavLink>
+            <NavLink
+              to="/"
+              className={`NavLink`}
+              exact
+              activeClassName="active"
+              onClick={this.handleLinkClick}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/work"
+              className={`NavLink`}
+              activeClassName="active"
+              onClick={this.handleLinkClick}
+            >
+              Work
+            </NavLink>
+            <NavLink
+              to="/travels"
+              className={`NavLink`}
+              activeClassName="active"
+              onClick={this.handleLinkClick}
+            >
+              Travels
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={`NavLink`}
+              activeClassName="active"
+              onClick={this.handleLinkClick}
+            >
+              Contact
+            </NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"
