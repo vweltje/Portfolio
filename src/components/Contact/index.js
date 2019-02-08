@@ -1,9 +1,18 @@
 import React from 'react'
+import Icon from '../Icons'
+
+import './style.css'
 
 export default () => {
   return (
-    <a href="mailto:vincentweltje@gmail.com" title="Contact me">
-      mail icon
-    </a>
+    <div className="Contact">
+      <a
+        className="Contact--button"
+        href="mailto:vincentweltje@gmail.com"
+        title="Contact me"
+      >
+        <Icon name="mail" />
+      </a>
+    </div>
   )
 }

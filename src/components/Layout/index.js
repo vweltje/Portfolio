@@ -3,6 +3,8 @@ import Logo from '../Logo'
 import Nav from '../Nav'
 import Contact from '../Contact'
 
+import './style.css'
+
 export default class Layout extends Component {
   render() {
     const { name, children } = this.props

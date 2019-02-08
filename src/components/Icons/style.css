@@ -1,0 +1,33 @@
+.Icon {
+  position: relative;
+  display: inline-block;
+}
+
+.Icon--mail {
+  width: 28px;
+  height: 20px;
+}
+
+.Icon--mail::before,
+.Icon--mail::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.Icon--mail::before {
+  width: 100%;
+  height: 100%;
+  border: 1px solid currentColor;
+}
+
+.Icon--mail::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  border-bottom: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  top: calc(50% - 1px);
+  left: calc(50% - 5px);
+}

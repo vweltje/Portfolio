@@ -61,7 +61,7 @@ body {
 }
 
 a {
-  color: var(--font-primary);
+  color: var(--primary);
 }
 
 strong {
