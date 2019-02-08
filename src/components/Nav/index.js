@@ -1,84 +1,23 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Menu, X } from 'react-feather'
 
-import './Nav.css'
-
-export default class Navigation extends Component {
-  state = {
-    active: false,
-    activeSubNav: false
-  }
-
-  handleMenuToggle = () => this.setState({ active: !this.state.active })
-
-  // Only close nav if it is open
-  handleLinkClick = () => this.state.active && this.handleMenuToggle()
-
-  toggleSubNav = subNav =>
-    this.setState({
-      activeSubNav: this.state.activeSubNav === subNav ? false : subNav
-    })
-
+export default class Nav extends Component {
   render() {
-    const { active } = this.state
-
     return (
-      <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
-        <div className="Nav--Container container">
-          <NavLink to="/" onClick={this.handleLinkClick}>
-            <div
-              className="Logo"
-              style={{
-                backgroundImage: `url(images/logo.svg)`
-              }}
-            />
-          </NavLink>
-          <div className="Nav--Links">
-            <NavLink
-              to="/"
-              className={`NavLink`}
-              exact
-              activeClassName="active"
-              onClick={this.handleLinkClick}
-            >
+      <nav className="Nav">
+        <ul>
+          <li>
+            <NavLink to="/about" exact activeClassName="active">
               About
             </NavLink>
-            <NavLink
-              to="/work"
-              className={`NavLink`}
-              activeClassName="active"
-              onClick={this.handleLinkClick}
-            >
+          </li>
+          <li>
+            <NavLink to="/work" exact activeClassName="active">
               Work
             </NavLink>
-            <NavLink
-              to="/travels"
-              className={`NavLink`}
-              activeClassName="active"
-              onClick={this.handleLinkClick}
-            >
-              Travels
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={`NavLink`}
-              activeClassName="active"
-              onClick={this.handleLinkClick}
-            >
-              Contact
-            </NavLink>
-          </div>
-          <button
-            className="Button-blank Nav--MenuButton"
-            onClick={this.handleMenuToggle}
-          >
-            {active ? <X /> : <Menu />}
-          </button>
-        </div>
+          </li>
+        </ul>
       </nav>
     )
   }
 }
-
-// export default () => <Location>{route => <Navigation {...route} />}</Location>

@@ -1,0 +1,139 @@
+/* Root */
+
+:root {
+  --col1: gainsboro;
+  --col2: #cccccc;
+  --col3: #b1b1b1;
+  --col4: #242c37;
+  --font-primary: 'Fira Code', sans-serif;
+  --font-system: system-ui; /* postcssPresetEnv */
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px var(--col4);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--col1);
+}
+
+::selection {
+  background: var(--col1);
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/eot/FiraCode-Light.eot');
+  src: url('/fonts/eot/FiraCode-Light.eot') format('embedded-opentype'),
+    url('/fonts/woff2/FiraCode-Light.woff2') format('woff2'),
+    url('/fonts/woff/FiraCode-Light.woff') format('woff'),
+    url('/fonts/ttf/FiraCode-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/eot/FiraCode-Regular.eot');
+  src: url('/fonts/eot/FiraCode-Regular.eot') format('embedded-opentype'),
+    url('/fonts/woff2/FiraCode-Regular.woff2') format('woff2'),
+    url('/fonts/woff/FiraCode-Regular.woff') format('woff'),
+    url('/fonts/ttf/FiraCode-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/eot/FiraCode-Medium.eot');
+  src: url('/fonts/eot/FiraCode-Medium.eot') format('embedded-opentype'),
+    url('/fonts/woff2/FiraCode-Medium.woff2') format('woff2'),
+    url('/fonts/woff/FiraCode-Medium.woff') format('woff'),
+    url('/fonts/ttf/FiraCode-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/eot/FiraCode-Bold.eot');
+  src: url('/fonts/eot/FiraCode-Bold.eot') format('embedded-opentype'),
+    url('/fonts/woff2/FiraCode-Bold.woff2') format('woff2'),
+    url('/fonts/woff/FiraCode-Bold.woff') format('woff'),
+    url('/fonts/ttf/FiraCode-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Global */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  min-height: 100%;
+  background: var(--lightGrey);
+}
+
+body {
+  font-family: var(--font-primary);
+  min-height: 100%;
+  position: relative;
+  background: var(--col4);
+  color: var(--col1);
+  font-size: 1.6em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--font-primary);
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: var(--col3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  letter-spacing: 0.5rem;
+  font-size: 6rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--col1);
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--col2);
+}

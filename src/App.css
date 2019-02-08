@@ -1,12 +1,17 @@
 /* Root */
 
 :root {
-  --col1: gainsboro;
-  --col2: #cccccc;
-  --col3: #b1b1b1;
-  --col4: #242c37;
-  --font-primary: 'Fira Code', sans-serif;
-  --font-system: system-ui; /* postcssPresetEnv */
+  --col1: #021d44;
+  --col2: #09244a;
+  --col3: #003a84;
+  --col4: #405572;
+  --primary: #ff3e55;
+  --text: #f7f6f5;
+  --textPrimary: #ffffff;
+  --font-primary: 'Montserrat', sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -18,58 +23,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--col1);
+  background-color: var(--col4);
 }
 
 ::selection {
-  background: var(--col1);
+  background: var(--primary);
 }
 
 /* Fonts */
 
-@font-face {
-  font-family: 'Fira Code';
-  src: url('/fonts/eot/FiraCode-Light.eot');
-  src: url('/fonts/eot/FiraCode-Light.eot') format('embedded-opentype'),
-    url('/fonts/woff2/FiraCode-Light.woff2') format('woff2'),
-    url('/fonts/woff/FiraCode-Light.woff') format('woff'),
-    url('/fonts/ttf/FiraCode-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Code';
-  src: url('/fonts/eot/FiraCode-Regular.eot');
-  src: url('/fonts/eot/FiraCode-Regular.eot') format('embedded-opentype'),
-    url('/fonts/woff2/FiraCode-Regular.woff2') format('woff2'),
-    url('/fonts/woff/FiraCode-Regular.woff') format('woff'),
-    url('/fonts/ttf/FiraCode-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Code';
-  src: url('/fonts/eot/FiraCode-Medium.eot');
-  src: url('/fonts/eot/FiraCode-Medium.eot') format('embedded-opentype'),
-    url('/fonts/woff2/FiraCode-Medium.woff2') format('woff2'),
-    url('/fonts/woff/FiraCode-Medium.woff') format('woff'),
-    url('/fonts/ttf/FiraCode-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fira Code';
-  src: url('/fonts/eot/FiraCode-Bold.eot');
-  src: url('/fonts/eot/FiraCode-Bold.eot') format('embedded-opentype'),
-    url('/fonts/woff2/FiraCode-Bold.woff2') format('woff2'),
-    url('/fonts/woff/FiraCode-Bold.woff') format('woff'),
-    url('/fonts/ttf/FiraCode-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /* Global */
 
@@ -88,8 +51,8 @@ body {
   font-family: var(--font-primary);
   min-height: 100%;
   position: relative;
-  background: var(--col4);
-  color: var(--col1);
+  background: var(--col1);
+  color: var(--text);
   font-size: 1.6em;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -108,7 +71,7 @@ strong {
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  color: var(--col3);
+  color: var(--text);
 }
 
 h1,
@@ -127,7 +90,7 @@ h1 {
   font-size: 6rem;
   margin: 0;
   font-weight: 600;
-  color: var(--col1);
+  color: var(--text);
 }
 
 h2 {
@@ -135,5 +98,5 @@ h2 {
   letter-spacing: 0.2rem;
   font-weight: 300;
   font-style: italic;
-  color: var(--col2);
+  color: var(--text);
 }
