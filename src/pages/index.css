@@ -1,0 +1,7 @@
+.Home--Heading {
+  position: absolute;
+  top: 50%;
+  left: 4vw;
+  transform: translateY(-50%);
+  display: block;
+}

@@ -4,6 +4,7 @@
   left: 4vw;
   height: 44px;
   width: 44px;
+  z-index: 100;
 }
 
 .Contact--button {

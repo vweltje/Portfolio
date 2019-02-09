@@ -8,9 +8,9 @@
   --primary: #ff3e55;
   --text: #f7f6f5;
   --textPrimary: #ffffff;
-  --font-primary: "Montserrat", sans-serif;
-  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  --font-primary: 'Montserrat', sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 
@@ -32,7 +32,7 @@
 
 /* Fonts */
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
 
 /* Global */
 
@@ -64,6 +64,7 @@ body {
 
 a {
   color: var(--primary);
+  text-decoration: none;
 }
 
 strong {
@@ -101,4 +102,19 @@ h2 {
   font-weight: 300;
   font-style: italic;
   color: var(--text);
+}
+
+.Content {
+  position: relative;
+  min-height: 100vh;
+  padding: 4vw;
+}
+
+.Backgound--Shape {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 40vw;
+  background: var(--col2);
 }
