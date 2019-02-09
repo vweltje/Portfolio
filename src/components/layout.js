@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 
-import Logo from "./logo";
-import Nav from "./nav";
-import Contact from "./contact";
+import Logo from './logo'
+import Nav from './nav'
+import Contact from './contact'
 
-import "./layout.css";
+import './layout.css'
 
-const Layout = ({ children, name }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -21,19 +21,17 @@ const Layout = ({ children, name }) => (
     `}
     render={() => (
       <>
-        <main className={name}>
-          <Logo />
-          <Nav socialIcons={false} />
-          <div className="Content">{children}</div>
-          <Contact />
-        </main>
+        <Logo />
+        <Nav socialIcons={false} />
+        {children}
+        <Contact />
       </>
     )}
   />
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
-};
+}
 
-export default Layout;
+export default Layout

@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
-import "./icon.css";
+import './icon.css'
 
-const childs = {};
+const childs = {}
 
 export const Icon = ({ name }) => (
-  <i className={`Icon Icon--${name}`}>{name in childs ? childs[name] : ""}</i>
-);
+  <i className={`Icon Icon--${name}`}>{name in childs ? childs[name] : ''}</i>
+)
 
-export default Icon;
+export default Icon

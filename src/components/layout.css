@@ -5,6 +5,7 @@
   --col2: #09244a;
   --col3: #003a84;
   --col4: #405572;
+  --col5: #0098ff;
   --primary: #ff3e55;
   --text: #f7f6f5;
   --textPrimary: #ffffff;
@@ -117,4 +118,5 @@ h2 {
   height: 100vh;
   width: 40vw;
   background: var(--col2);
+  z-index: -1;
 }

@@ -1,3 +1,4 @@
+// driesvanbroeck
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -5,10 +6,12 @@ import SEO from '../components/seo'
 import './index.css'
 
 const IndexPage = () => (
-  <Layout name="Home">
+  <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h2 class="Home--Heading">Hi I am a developer</h2>
-    <div className="Backgound--Shape" />
+    <main className="Content">
+      <h2 className="Home--Heading">Hi I am a developer</h2>
+      <div className="Backgound--Shape" />
+    </main>
   </Layout>
 )
 

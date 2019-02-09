@@ -1,0 +1,55 @@
+.Article {
+  width: 65%;
+  margin: 8rem auto 4rem auto;
+  z-index: 1;
+}
+
+.Article--header {
+  margin-top: 15rem;
+}
+
+.Article--header h1 {
+  text-transform: none;
+  font-weight: 700;
+  line-height: 8rem;
+  font-size: 6rem;
+}
+
+.Article--intro {
+  margin-top: 3rem;
+}
+
+.Article--intro p {
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 5.5rem;
+}
+
+.Article--text p {
+  font-size: 2.2rem;
+}
+
+.Skills {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+
+.Skills--title {
+  margin-right: 5rem;
+  font-size: 2.2rem;
+}
+
+.Skills--item {
+  background: var(--primary);
+  color: var(--text);
+  padding: 0.5rem 2rem;
+  margin-right: 2rem;
+  border-radius: 5rem;
+  border: 4px solid var(--primary);
+  font-weight: 400;
+}

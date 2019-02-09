@@ -3,6 +3,13 @@
   display: inline-block;
 }
 
+.Icon::after,
+.Icon::before {
+  box-sizing: border-box;
+}
+
+/* Mail icon */
+
 .Icon--mail {
   width: 28px;
   height: 20px;
@@ -10,9 +17,8 @@
 
 .Icon--mail::before,
 .Icon--mail::after {
-  content: "";
+  content: '';
   position: absolute;
-  box-sizing: border-box;
 }
 
 .Icon--mail::before {
@@ -30,4 +36,21 @@
   border-right: 1px solid currentColor;
   top: calc(50% - 1px);
   left: calc(50% - 5px);
+}
+
+/* Next icon */
+
+.Icon--next {
+  width: 20px;
+  height: 20px;
+}
+
+.Icon--next::after {
+  content: '';
+  display: block;
+  transform: rotate(45deg);
+  height: 100%;
+  width: 100%;
+  border-top: 4px solid currentColor;
+  border-right: 4px solid currentColor;
 }
