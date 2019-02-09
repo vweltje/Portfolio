@@ -1,0 +1,12 @@
+.Nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 8vw;
+  border-left: 1px solid var(--col4);
+}
+
+.Nav--Items {
+  list-style: none;
+}

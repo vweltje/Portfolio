@@ -1,0 +1,104 @@
+/* Root */
+
+:root {
+  --col1: #021d44;
+  --col2: #09244a;
+  --col3: #003a84;
+  --col4: #405572;
+  --primary: #ff3e55;
+  --text: #f7f6f5;
+  --textPrimary: #ffffff;
+  --font-primary: "Montserrat", sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px var(--col4);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--col4);
+}
+
+::selection {
+  background: var(--primary);
+}
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* Global */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  min-height: 100%;
+  background: var(--lightGrey);
+}
+
+body {
+  font-family: var(--font-primary);
+  min-height: 100%;
+  position: relative;
+  background: var(--col1);
+  color: var(--text);
+  font-size: 1.6em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--primary);
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  letter-spacing: 0.5rem;
+  font-size: 6rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text);
+}
