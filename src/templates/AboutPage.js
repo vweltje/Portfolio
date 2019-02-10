@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Form from '../components/form'
 
-import './about.css'
+import './AboutPage.css'
 
 const AboutPage = () => (
   <Layout name="Home">

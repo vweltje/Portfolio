@@ -1,5 +1,5 @@
 ---
-template: home
+template: HomePage
 slug: ''
 title: ''
 meta:

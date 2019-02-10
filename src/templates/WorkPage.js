@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Masonry from '../components/masonry'
 
-import './work.css'
+import './WorkPage.css'
 
 let brakePoints = [350, 500, 750]
 let images = []

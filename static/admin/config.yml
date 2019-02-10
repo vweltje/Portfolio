@@ -26,7 +26,12 @@ collections: # A list of collections the CMS should be able to edit
         label: 'Home Page'
         name: 'home'
         fields:
-          - { label: Template, name: template, widget: hidden, default: home }
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: HomePage,
+            }
           - { label: Slug, name: slug, widget: hidden, default: 'home' }
           - { label: Title, name: title, widget: string }
           - label: 'Meta'
@@ -59,7 +64,12 @@ collections: # A list of collections the CMS should be able to edit
         label: 'Work Page'
         name: 'work'
         fields:
-          - { label: Template, name: template, widget: hidden, default: work }
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: WorkPage,
+            }
           - { label: Slug, name: slug, widget: hidden, default: 'work' }
           - { label: Title, name: title, widget: string }
           - label: 'Meta'
@@ -92,7 +102,12 @@ collections: # A list of collections the CMS should be able to edit
         label: 'About Page'
         name: 'about'
         fields:
-          - { label: Template, name: template, widget: hidden, default: about }
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: AboutPage,
+            }
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
           - label: 'Meta'
@@ -129,7 +144,12 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: Template, name: template, widget: hidden, default: project }
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: SingleProjectPage,
+        }
       - { label: Title, name: title, widget: string }
       - label: 'Meta'
         required: false

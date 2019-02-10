@@ -1,5 +1,5 @@
 ---
-template: about
+template: AboutPage
 slug: about
 title: ''
 meta:

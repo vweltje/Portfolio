@@ -1,5 +1,5 @@
 ---
-template: work
+template: WorkPage
 slug: work
 title: ''
 meta:

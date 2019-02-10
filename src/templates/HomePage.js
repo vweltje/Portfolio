@@ -2,9 +2,9 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import './home.css'
+import './HomePage.css'
 
-const IndexPage = () => (
+const HomePage = () => (
   <Layout>
     <main className="Content">
       <h2 className="Home--Heading">Hi I am a developer</h2>
@@ -13,4 +13,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default HomePage
