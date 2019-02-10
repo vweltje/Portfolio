@@ -1,7 +1,7 @@
 ---
-template: Home
+template: home
 slug: ''
-title: Portfolio | Vincent Weltje
+title: ''
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter

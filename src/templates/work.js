@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import Masonry from '../components/masonry'
 
 import './work.css'
@@ -15,7 +14,6 @@ for (let i = 0; i < imgId.length; i++) {
 
 const WorkPage = () => (
   <Layout name="Home">
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Masonry brakePoints={brakePoints}>
       {images.map((image, id) => {
         return <Tile key={`tile-${id}`} src={image} />

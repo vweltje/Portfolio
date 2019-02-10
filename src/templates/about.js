@@ -1,13 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Form from '../components/form'
-import SEO from '../components/seo'
 
 import './about.css'
 
 const AboutPage = () => (
   <Layout name="Home">
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <article className="Article ">
       <section className="Article--header">
         <h1>

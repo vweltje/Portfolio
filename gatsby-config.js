@@ -2,29 +2,59 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   siteMetadata: {
-    title: `Portfolio | Vincent Weltje`,
-    description: `Porfolio website from Vincent Weltje`,
-    author: `Vincent Weltje`
+    title: 'Yelloecake',
+    siteUrl: 'https://yellowcake.netlify.com'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-yaml',
+
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-offline',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+        runtimeCaching: [
+          {
+            // Use cacheFirst since these don't need to be revalidated (same RegExp
+            // and same reason as above)
+            urlPattern: /(\.js$|\.css$|static\/)/,
+            handler: `cacheFirst`
+          },
+          {
+            // Add runtime caching of various other page resources
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: `staleWhileRevalidate`
+          },
+          {
+            // uploadcare
+            urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
+            handler: `staleWhileRevalidate`
+          }
+        ],
+        skipWaiting: true,
+        clientsClaim: true
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
+        name: 'yellowcake',
+        short_name: 'yellowcake',
+        start_url: '/',
+        background_color: '#00C2BD',
+        theme_color: '#00C2BD',
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: 'standalone',
+        icon: `${__dirname}/static/images/logo.svg` // This path is relative to the root of the site.
+      }
+    },
+
+    // Add static assets before markdown files
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/images`,
+        name: 'images'
       }
     },
     {
@@ -34,8 +64,31 @@ module.exports = {
         name: 'pages'
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
+    // images
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false
+            }
+          },
+          `gatsby-remark-responsive-iframe`
+        ]
+      }
+    },
+
+    // css (replace with gatsby-plugin-sass for v2)
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -75,8 +128,5 @@ module.exports = {
       }
     },
     'gatsby-plugin-netlify' // make sure to keep it last in the array
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ]
 }
