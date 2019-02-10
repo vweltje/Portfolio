@@ -4,7 +4,7 @@ import { serialize } from 'dom-form-serializer'
 
 import Icon from './icon'
 
-import './Form.css'
+import './form.css'
 
 class Form extends React.Component {
   static defaultProps = {
