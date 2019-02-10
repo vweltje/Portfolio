@@ -14,19 +14,17 @@ export default class Masonry extends Component {
     window.addEventListener('resize', this.onResize)
   }
 
+  onResize() {
+    const columns = this.getColumns(this.refs.Masonry.offsetWidth)
+    if (columns !== this.state.columns) this.setState({ columns })
+  }
+
   getColumns(w) {
     return (
       this.props.brakePoints.reduceRight((p, c, i) => {
         return c < w ? p : i
       }, this.props.brakePoints.length) + 1
     )
-  }
-
-  onResize() {
-    const columns = this.getColumns(this.refs.Masonry.offsetWidth)
-    if (columns !== this.state.columns) {
-      this.setState({ columns: columns })
-    }
   }
 
   mapChildren() {
