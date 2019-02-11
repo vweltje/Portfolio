@@ -4,6 +4,5 @@ slug: ''
 title: Home
 meta:
   description: ''
-  title: The Ultimate Gatsby Starter
+  title: Home
 ---
-

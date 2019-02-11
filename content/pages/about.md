@@ -20,6 +20,5 @@ tags:
 meta:
   canonicalLink: ''
   description: ''
-  title: The Ultimate Gatsby Starter
+  title: About
 ---
-
