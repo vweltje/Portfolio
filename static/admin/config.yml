@@ -146,7 +146,7 @@ collections: # A list of collections the CMS should be able to edit
                 }
 
   - name: projects
-    label: project
+    label: projects
     editor:
       preview: true
     folder: content/projects
