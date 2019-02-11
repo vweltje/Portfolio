@@ -110,6 +110,15 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Sub Heading, name: subHeading, widget: string }
+          - { label: Text, name: Text, widget: text }
+          - label: 'Tags'
+            name: 'tags'
+            widget: list
+            fields:
+              - { label: Tag, name: tag, widget: string }
+
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -156,7 +165,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Featured Image, name: featuredImage, widget: image }
       - label: 'keywords'
         name: 'keywords'
-        widget: 'object'
+        widget: 'list'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: description, name: description, widget: string }
