@@ -1,8 +1,9 @@
 ---
 template: HomePage
 slug: ''
-title: ''
+title: Home
 meta:
-  description: This is a meta description.
+  description: ''
   title: The Ultimate Gatsby Starter
 ---
+
