@@ -1,8 +1,9 @@
 ---
 template: WorkPage
 slug: work
-title: ''
+title: Work
 meta:
-  description: This is a meta description.
+  description: ''
   title: The Ultimate Gatsby Starter
 ---
+
