@@ -37,13 +37,10 @@ const WorkPageTemplate = ({ projects }) => (
 const WorkPage = ({ data: { page, projects } }) => {
   return (
     <Layout
-      name="Home"
       meta={page.frontmatter.meta || false}
       title={page.frontmatter.title || false}
     >
       <WorkPageTemplate
-        {...page}
-        {...page.fields}
         projects={projects.edges.map(project => ({
           ...project.node,
           ...project.node.fields,
@@ -57,10 +54,6 @@ const WorkPage = ({ data: { page, projects } }) => {
 export default WorkPage
 
 export const pageQuery = graphql`
-  ## Query for WorkPage data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
   query WorkPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
