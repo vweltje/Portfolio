@@ -159,7 +159,8 @@ collections: # A list of collections the CMS should be able to edit
           widget: hidden,
           default: SingleProjectPage,
         }
-      - { label: Title, name: title, widget: string, required: false }
+      - { label: Title, name: title, widget: string }
+      - { label: Position, name: position, widget: number }
       - { label: Link, name: link, widget: string }
       - { label: Description, name: description, widget: text, required: false }
       - { label: Featured Image, name: featuredImage, widget: image }
