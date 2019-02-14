@@ -5,16 +5,6 @@ import Masonry from '../components/masonry'
 
 import './WorkPage.css'
 
-let brakePoints = [350, 500, 750]
-let images = []
-
-const imgId = [1011, 883, 1074, 823, 64, 65, 839, 314, 256, 316, 92, 643]
-
-for (let i = 0; i < imgId.length; i++) {
-  const ih = 200 + Math.floor(Math.random() * 10) * 15
-  images.push('https://unsplash.it/250/' + ih + '?image=' + imgId[i])
-}
-
 const Tile = ({ key, src }) => {
   return (
     <div key={key} className="Masonry--tile">
@@ -25,11 +15,6 @@ const Tile = ({ key, src }) => {
 
 const WorkPageTemplate = ({ projects }) => (
   <>
-    <Masonry brakePoints={brakePoints}>
-      {images.map((image, id) => {
-        return <Tile key={`tile-${id}`} src={image} />
-      })}
-    </Masonry>
     <div className="Backgound--Shape" />
   </>
 )
@@ -73,6 +58,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            position
             featuredImage
             keywords {
               title
