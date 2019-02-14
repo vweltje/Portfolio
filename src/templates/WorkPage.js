@@ -27,7 +27,7 @@ const WorkPageTemplate = ({ projects }) => {
   projects = orderBy(projects, 'position')
   return (
     <>
-      <div class="Grid">
+      <div className="Grid">
         {projects.slice(0, 8).map((project, key) => (
           <Tile key={key} {...project} />
         ))}
