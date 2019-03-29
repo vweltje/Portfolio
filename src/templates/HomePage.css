@@ -4,4 +4,9 @@
   left: 4vw;
   transform: translateY(-50%);
   display: block;
+  line-height: 3rem;
+}
+
+.Home--Heading small {
+  font-size: 1.8rem;
 }

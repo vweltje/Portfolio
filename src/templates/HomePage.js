@@ -6,7 +6,11 @@ import './HomePage.css'
 
 const HomePageTemplate = () => (
   <main className="Content">
-    <h2 className="Home--Heading">Hi I am a developer</h2>
+    <h2 className="Home--Heading">
+      Hi I am a developer
+      <br />
+      <small>NOTE: Site under constrioction</small>
+    </h2>
     <div className="Backgound--Shape" />
   </main>
 )

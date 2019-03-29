@@ -9,7 +9,7 @@ export default class Nav extends Component {
       <nav className="Nav">
         <ul className="Nav--Items">
           <li>
-            <Link to="/work" className="Nav--Item" activeClassName="active">
+            <Link to="/" className="Nav--Item" activeClassName="active">
               Work
             </Link>
           </li>
