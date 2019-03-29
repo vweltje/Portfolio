@@ -9,7 +9,7 @@ const HomePageTemplate = () => (
     <h2 className="Home--Heading">
       Hi I am a developer
       <br />
-      <small>NOTE: Site under constrioction</small>
+      <small>NOTE: Site under construction</small>
     </h2>
     <div className="Backgound--Shape" />
   </main>
